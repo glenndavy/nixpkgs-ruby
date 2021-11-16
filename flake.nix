@@ -16,8 +16,8 @@
         pkgs = pkgs;
         rvm-patchsets = rvm-patchsets;
       };
-    packages.x86_64-linux = let
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    packages.x86_64-darwin = let
+      pkgs = nixpkgs.legacyPackages.x86_64-darwin;
       mkRuby = self.lib.mkRuby;
     in {
       ruby-2_7 = mkRuby {
