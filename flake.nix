@@ -19,6 +19,9 @@
     packages.aarch64-darwin= let
       pkgs = nixpkgs.legacyPackages.aarch64-darwin;
       mkRuby = self.lib.mkRuby;
+    packages.x86_64-darwin= let
+      pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+      mkRuby = self.lib.mkRuby;
     in {
       ruby-2_7 = mkRuby {
         rubyVersion = "2.7.*";
