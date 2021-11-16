@@ -16,8 +16,8 @@
         pkgs = pkgs;
         rvm-patchsets = rvm-patchsets;
       };
-    packages.x86_64-darwin = let
-      pkgs = nixpkgs.legacyPackages.x86_64-darwin;
+    packages.aarch64-darwin= let
+      pkgs = nixpkgs.legacyPackages.aarch64-darwin;
       mkRuby = self.lib.mkRuby;
     in {
       ruby-2_7 = mkRuby {
@@ -61,8 +61,8 @@
         inherit pkgs;
       };
     };
-    defaultPackage.x86_64-linux = self.lib.mkRuby {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    defaultPackage.aarch64-darwin = self.lib.mkRuby {
+      pkgs = nixpkgs.legacyPackages.aarch64-darwin;
       rubyVersion = "*";
     };
   };
